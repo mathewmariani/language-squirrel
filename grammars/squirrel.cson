@@ -1,0 +1,191 @@
+'comment': 'Squirrel Syntax: version 0.1'
+'fileTypes': [
+  'nut'
+]
+'name': 'Squirrel'
+'patterns': [
+  {
+    'captures':
+      '1':
+        'name': 'storage.type.class.squirrel'
+      '2':
+        'name': 'entity.name.type.class.squirrel'
+      '3':
+        'name': 'storage.modifier.extends.squirrel'
+      '4':
+        'name': 'entity.other.inherited-class.squirrel'
+    'match': '\\b(class)\\s+([a-zA-Z_](?:\\w|\\.)*)(?:\\s+(extends)\\s+([a-zA-Z_](?:\\w|\\.)*))?'
+    'name': 'meta.class.squirrel'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b'
+    'name': 'constant.numeric.squirrel'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.squirrel'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.squirrel'
+    'name': 'string.quoted.single.squirrel'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.squirrel'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.squirrel'
+    'name': 'string.quoted.double.squirrel'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.squirrel'
+      }
+    ]
+  }
+  {
+    'begin': '/\\*'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.begin.squirrel'
+    'end': '\\*/'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.end.squirrel'
+    'name': 'comment.block.squirrel'
+  }
+  {
+    'begin': '(^[ \\t]+)?(?=//)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.squirrel'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.squirrel'
+        'end': '(?=\\n)'
+        'name': 'comment.line.double-slash.squirrel'
+      }
+    ]
+  }
+  {
+    'begin': '(^[ \\t]+)?(?=#)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.squirrel'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '#'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.squirrel'
+        'end': '(?=\\n)'
+        'name': 'comment.line.hash.squirrel'
+      }
+    ]
+  }
+  {
+    'match': '\\b(if|else|while|do|switch|case|break|for|foreach|return|throw|yield|continue|try|catch|resume|default)\\b'
+    'name': 'keyword.control.squirrel'
+  }
+  {
+    'match': '\\b(true|false|null)\\b'
+    'name': 'constant.language.squirrel'
+  }
+  {
+    'match': '\\b(base|this)\\b'
+    'name': 'variable.language.squirrel'
+  }
+  {
+    'match': '\\b(local|class|function|constructor|enum)\\b'
+    'name': 'storage.type.squirrel'
+  }
+  {
+    'match': '\\b(extends|static|const)\\b'
+    'name': 'storage.modifier.squirrel'
+  }
+  {
+    'match': '(?:\\::|)\\b(print)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.squirrel'
+  }
+  {
+    'match': '(?:\\::|)\\b(suspend|newthread)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.thread.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(append|apply|clear|extend|filter|find|insert|len|map|pop|push|reduce|remove|resize|reverse|slice|sort|top)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.array.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(tofloat|tointeger|tostring)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.bool.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(tochar|tofloat|tostring)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.integer.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(tochar|tointeger|tostring)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.float.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(acall|bindenv|call|pacall|pcall)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.function.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(find|len|slice|tofloat|tointeger|tolower|toupper)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.string.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(clear|getdelegate|len|rawdelete|rawget|rawin|rawset|setdelegate)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.table.squirrel'
+  }
+  {
+    'match': '(?<![^.]\\.)\\b(ref|weakref)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.weakref.squirrel'
+  }
+  {
+    'match': '(?:\\::|)\\b(dofile|loadfile|writeclosuretofile|stderr|stdin|stdout)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.library.io.squirrel'
+  }
+  {
+    'match': '(?:\\::|)\\b(castf2i|casti2f|swap2|swap4|swapfloat)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.library.blob.squirrel'
+  }
+  {
+    'match': '(?:\\::|)\\b(abs|acos|asin|atan|atan2|ceil|cos|exp|fabs|floor|log|log10|pow|rand|sin|sqrt|srand|tan)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.library.math.squirrel'
+  }
+  {
+    'match': '(?:\\::|)\\b(clock|date|getenv|remove|rename|system|time)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.library.system.squirrel'
+  }
+  {
+    'match': '(?:\\::|)\\b(endswith|escape|format|lstrip|rstrip|split|startswith|strip)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.library.string.squirrel'
+  }
+  {
+    'match': '\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.any-method.squirrel'
+  }
+  {
+    'match': '\\b(delete|in|clone|instanceof|typeof)\\b'
+    'name': 'keyword.operator.squirrel'
+  }
+  {
+    'match': 'match': '!|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|==|=|!=|<=>|<=|>=|<-|>>>|<<|>>|<|>|!|&&|\\|\\||\\?\\:|\\*=|(?<!\\()/=|%=|\\+=|\\-=|&=|%=|'
+    'name': 'keyword.operator.squirrel'
+  }
+
+]
+'scopeName': 'source.nut'
