@@ -5,34 +5,6 @@
 'name': 'Squirrel'
 'patterns': [
   {
-    'captures':
-      '1':
-        'name': 'storage.type.class.squirrel'
-      '2':
-        'name': 'entity.name.type.class.squirrel'
-      '3':
-        'name': 'storage.modifier.extends.squirrel'
-      '4':
-        'name': 'entity.other.inherited-class.squirrel'
-    'match': '\\b(class)\\s+([a-zA-Z_](?:\\w|\\.)*)(?:\\s+(extends)\\s+([a-zA-Z_](?:\\w|\\.)*))?'
-    'name': 'meta.class.squirrel'
-  }
-  {
-    'match': '\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b'
-    'name': 'constant.numeric.squirrel'
-  }
-  {
-    'begin': '\''
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.squirrel'
-    'end': '\''
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.squirrel'
-    'name': 'string.quoted.single.squirrel'
-  }
-  {
     'begin': '"'
     'beginCaptures':
       '0':
@@ -95,11 +67,65 @@
     ]
   }
   {
-    'match': '\\b(if|else|while|do|switch|case|break|for|foreach|return|throw|yield|continue|try|catch|resume|default)\\b'
+    'begin': '\\b(class)\\b\\s*([_A-Za-z][_A-Za-z0-9]*\\b)?+(\\s*(extends)\\s*([_A-Za-z][_A-Za-z0-9]*\\b))?'
+    'beginCaptures':
+      '1':
+        'name': 'storage.type.class.squirrel'
+      '2':
+        'name': 'entity.name.type.class.squirrel'
+      '4':
+        'name': 'storage.type.class.modifier.squirrel'
+      '5':
+        'name': 'entity.name.type.inherited.squirrel'
+      '6':
+        'patterns': [
+          {
+            'match': '(extends)'
+            'name': 'storage.type.class.modifier.squirrel'
+          }
+          {
+            'match': '[_A-Za-z][_A-Za-z0-9]*'
+            'name': 'entity.name.type.inherited.squirrel'
+          }
+        ]
+    'end': '(?=\\{)'
+    'name': 'meta.class.squirrel'
+  }
+  {
+    'begin': '\\b(function)\\b\\s*([_A-Za-z][_A-Za-z0-9]*\\b)?+((::)([_A-Za-z][_A-Za-z0-9]*\\b))?'
+    'beginCaptures':
+      '1':
+        'name': 'storage.type.function.squirrel'
+      '2':
+        'name': 'entity.name.type.class.squirrel'
+      '4':
+        'name': 'keyword.operator.squirrel'
+      '5':
+        'name': 'entity.name.type.function.squirrel'
+    'end': '(?=\\()'
+    'name': 'meta.class.squirrel'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b'
+    'name': 'constant.numeric.squirrel'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.squirrel'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.squirrel'
+    'name': 'string.quoted.single.squirrel'
+  }
+  {
+    'match': '\\b(if|else|while|do|switch|case|break|for|foreach|in|return|throw|yield|continue|try|catch|resume|default)\\b'
     'name': 'keyword.control.squirrel'
   }
   {
-    'match': '\\b(true|false|null)\\b'
+    'match': '(?<![^.]\\.|:)\\b([A-Z_]+|false|null|true)\\b'
     'name': 'constant.language.squirrel'
   }
   {
@@ -167,6 +193,10 @@
     'name': 'support.function.library.math.squirrel'
   }
   {
+    'match': '\\b(PI|RAND_MAX)\\b'
+    'name': 'support.constant.library.math.squirrel'
+  }
+  {
     'match': '(?:\\::|)\\b(clock|date|getenv|remove|rename|system|time)\\b(?=\\s*(?:[({"\']|\\[\\[))'
     'name': 'support.function.library.system.squirrel'
   }
@@ -179,13 +209,24 @@
     'name': 'support.function.any-method.squirrel'
   }
   {
-    'match': '\\b(delete|in|clone|instanceof|typeof)\\b'
+    'match': '\\b(delete|clone|instanceof|typeof)\\b'
     'name': 'keyword.operator.squirrel'
   }
   {
-    'match': 'match': '!|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|==|=|!=|<=>|<=|>=|<-|>>>|<<|>>|<|>|!|&&|\\|\\||\\?\\:|\\*=|(?<!\\()/=|%=|\\+=|\\-=|&=|%=|'
+    'match': 'match': '!|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|==|=|!=|<=>|<=|>=|<-|>>>|<<|>>|<|>|!|&&|\\|\\||\\?\\:|\\*=|(?<!\\()/=|%=|\\+=|\\-=|&=|%=|\\.'
     'name': 'keyword.operator.squirrel'
   }
-
+  {
+    'match': '\\{|\\}'
+    'name': 'meta.brace.curly.squirrel'
+  }
+  {
+    'match': '\\(|\\)'
+    'name': 'meta.brace.round.squirrel'
+  }
+  {
+    'match': '\\[|\\]'
+    'name': 'meta.brace.square.squirrel'
+  }
 ]
 'scopeName': 'source.nut'
