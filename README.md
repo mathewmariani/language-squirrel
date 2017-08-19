@@ -13,6 +13,7 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 | func          | function                 | function functionName (arg) { # body }|
 
 #### local variable snippets
+
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
 | local         | local variable           | local x = 1;         |
@@ -20,11 +21,13 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 | lclass        | local class              | local className = class { # body };           |
 
 #### anonymous variable snippets
+
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
 | afunc         | anonymous function       | function(arg) { # body };|
 
 #### loop snippets
+
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
 | while         | while                    | while (condition) { # body }|
@@ -32,6 +35,7 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 | fore          | foreach                  | foreach (idx, val in container) { # body }|
 
 #### control flow snippets
+
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
 | if            | if conditional           | if (cond) { # body } |
@@ -39,14 +43,18 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 | els           | else                     | else { # body }      |
 | elif          | else                     | else if (cond) { # body }|
 
-#### io library snippets
+#### blob library snippets
+
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
-| dofile        | io.dofile                | dofile(path [, raiseerror]);|
-| loadfile      | io.loadfile              | loadfile(path [, raiseerror]);|
-| writeclosuretofile| io.writeclosuretofile| writeclosuretofile(destpath, closure);|
+| castf2i       | blob.castf2i             | castf2i(float);      |
+| casti2f       | blob.casti2f             | casti2f(integer);    |
+| swap2         | blob.swap2               | swap2(n);            |
+| swap4         | blob.swap4               | swap4(n);            |
+| swapfloat     | blob.swapfloat           | swapfloat(n);        |
 
 #### math library snippets
+
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
 | abs           | math.abs                 | abs(value);          |

@@ -100,6 +100,23 @@
     'prefix': 'writeclosuretofile'
     'body': 'writeclosuretofile(${0:destpath}, ${0:closure});'
 
+    # blob snippets
+  'blob.castf2i'
+    'prefix': 'castf2i'
+    'body': 'castf2i(${0:float});'
+  'blob.casti2f'
+    'prefix': 'casti2f'
+    'body': 'casti2f(${0:integer});'
+  'blob.swap2'
+    'prefix': 'swap2'
+    'body': 'swap2(${0:n});'
+  'blob.swap4'
+    'prefix': 'swap4'
+    'body': 'swap4(${0:n});'
+  'blob.swapfloat'
+    'prefix': 'swap2'
+    'body': 'swapfloat(${0:n});'  
+
   # math snippets
   'math.abs':
     'prefix': 'abs'
