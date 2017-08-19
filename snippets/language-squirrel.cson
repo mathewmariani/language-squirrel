@@ -61,6 +61,11 @@
     'prefix': 'lclass'
     'body': 'local ${1:className} = class {\n\t${0:# body}\n};'
 
+  # anonymous variables
+  'anonymous function':
+    'prefrix': 'afunc'
+    'body': 'function(${1:arg}) {\n\t${0:# body}\n};'
+
   # loop snippets
   'while':
     'prefix': 'while'

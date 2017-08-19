@@ -17,6 +17,11 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 | lfunc         | local function           | local functionName = function(arg) { # body };|
 | lclass        | local class              | local className = class { # body };           |
 
+#### anonymous variable snippets
+| Trigger       | Name                     | Body                 |
+| ------------- |--------------------------| ---------------------|
+| afunc         | anonymous function       | function(arg) { # body };|
+
 #### loop snippets
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
