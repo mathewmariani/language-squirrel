@@ -89,6 +89,17 @@
     'prefix': 'elif',
     'body': 'else if (${1:cond}) {\n\t${0:# body}\n}'
 
+  # io snippets
+  'io.dofile':
+    'prefix': 'dofile'
+    'body': 'dofile(${0:path} ${1:[, raiseerror]});'
+  'io.loadfile':
+    'prefix': 'loadfile'
+    'body': 'dofile(${0:path} ${1:[, raiseerror]});'
+  'io.writeclosuretofile':
+    'prefix': 'writeclosuretofile'
+    'body': 'writeclosuretofile(${0:destpath}, ${0:closure});'
+
   # math snippets
   'math.abs':
     'prefix': 'abs'

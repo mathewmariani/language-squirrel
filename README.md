@@ -39,25 +39,32 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 | els           | else                     | else { # body }      |
 | elif          | else                     | else if (cond) { # body }|
 
+#### io library snippets
+| Trigger       | Name                     | Body                 |
+| ------------- |--------------------------| ---------------------|
+| dofile        | io.dofile                | dofile(path [, raiseerror]);|
+| loadfile      | io.loadfile              | loadfile(path [, raiseerror]);|
+| writeclosuretofile| io.writeclosuretofile| writeclosuretofile(destpath, closure);|
+
 #### math library snippets
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
-| abs           | math.abs                 | abs(value)           |
-| acos          | math.acos                | acos(cosine)         |
-| asin          | math.asin                | asin(sine)           |
-| atan          | math.atan                | atan(tangent)        |
-| atan2         | math.atan2               | atan2(adj, opp)      |
-| ceil          | math.ceil                | ceil(value)          |
-| cos           | math.cos                 | cos(angle)           |
-| exp           | math.exp                 | exp(power)           |
-| abs           | math.fabs                | fabs(value)          |
-| floor         | math.floor               | floor(value)         |
-| log           | math.log                 | log(value)           |
-| log10         | math.log10               | log10(value)         |
-| rand          | math.rand                | rand()               |
-| sin           | math.sin                 | sin(angle)           |
-| sqrt          | math.sqrt                | sqrt(value)          |
-| tan           | math.tan                 | tan(angle)           |
+| abs           | math.abs                 | abs(value);          |
+| acos          | math.acos                | acos(cosine);        |
+| asin          | math.asin                | asin(sine);          |
+| atan          | math.atan                | atan(tangent);       |
+| atan2         | math.atan2               | atan2(adj, opp);     |
+| ceil          | math.ceil                | ceil(value);         |
+| cos           | math.cos                 | cos(angle);          |
+| exp           | math.exp                 | exp(power);          |
+| abs           | math.fabs                | fabs(value);         |
+| floor         | math.floor               | floor(value);        |
+| log           | math.log                 | log(value);          |
+| log10         | math.log10               | log10(value);        |
+| rand          | math.rand                | rand();              |
+| sin           | math.sin                 | sin(angle);          |
+| sqrt          | math.sqrt                | sqrt(value);         |
+| tan           | math.tan                 | tan(angle);          |
 
 ## Contributing
 
