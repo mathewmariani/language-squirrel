@@ -1,8 +1,11 @@
 '.source.nut':
   # class snippets
-  # 'class'
-  #   'prefix': 'class'
-  #   'body': 'class ${0:functionName} {\n\tconstructor() { }\n}'
+  'class':
+    'prefix': 'class'
+    'body': 'class ${0:className}  {\n\t\n}'
+  'inherited class':
+    'prefix': 'iclass'
+    'body': 'class ${0:className} extends ${1:inheritedClass} {\n\t\n}'
   'function':
     'prefix': 'func'
     'body': 'function ${1:functionName} (${2:arg}) {\n\t${0:# body}\n}'
@@ -60,11 +63,6 @@
   'local class':
     'prefix': 'lclass'
     'body': 'local ${1:className} = class {\n\t${0:# body}\n};'
-
-  # anonymous variables
-  'anonymous function':
-    'prefrix': 'afunc'
-    'body': 'function(${1:arg}) {\n\t${0:# body}\n};'
 
   # loop snippets
   'while':

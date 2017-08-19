@@ -8,6 +8,8 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
+| class         | class                    | class className { }  |
+| iclass        | inherited class          | class className extends inheritedClass { }|
 | func          | function                 | function functionName (arg) { # body }|
 
 #### local variable snippets
