@@ -42,37 +42,7 @@ Add syntax highlighting and snippets to Squirrel files in Atom.
 | ife           | if else conditional      | if (cond) { # body } else { # body }|
 | els           | else                     | else { # body }      |
 | elif          | else                     | else if (cond) { # body }|
-
-#### blob library snippets
-
-| Trigger       | Name                     | Body                 |
-| ------------- |--------------------------| ---------------------|
-| castf2i       | blob.castf2i             | castf2i(float);      |
-| casti2f       | blob.casti2f             | casti2f(integer);    |
-| swap2         | blob.swap2               | swap2(n);            |
-| swap4         | blob.swap4               | swap4(n);            |
-| swapfloat     | blob.swapfloat           | swapfloat(n);        |
-
-#### math library snippets
-
-| Trigger       | Name                     | Body                 |
-| ------------- |--------------------------| ---------------------|
-| abs           | math.abs                 | abs(value);          |
-| acos          | math.acos                | acos(cosine);        |
-| asin          | math.asin                | asin(sine);          |
-| atan          | math.atan                | atan(tangent);       |
-| atan2         | math.atan2               | atan2(adj, opp);     |
-| ceil          | math.ceil                | ceil(value);         |
-| cos           | math.cos                 | cos(angle);          |
-| exp           | math.exp                 | exp(power);          |
-| abs           | math.fabs                | fabs(value);         |
-| floor         | math.floor               | floor(value);        |
-| log           | math.log                 | log(value);          |
-| log10         | math.log10               | log10(value);        |
-| rand          | math.rand                | rand();              |
-| sin           | math.sin                 | sin(angle);          |
-| sqrt          | math.sqrt                | sqrt(value);         |
-| tan           | math.tan                 | tan(angle);          |
+| switch        | switch block             | switch (cond) { ndefault: break; }|
 
 ## Contributing
 
