@@ -35,26 +35,7 @@ Squirrel offers two variations of for single-line comments `//` (two slashes) an
 | ife           | if else conditional      | if (cond) { # body } else { # body }|
 | els           | else                     | else { # body }      |
 | elif          | else                     | else if (cond) { # body }|
-
-#### math library snippets
-| Trigger       | Name                     | Body                 |
-| ------------- |--------------------------| ---------------------|
-| abs           | math.abs                 | abs(value)           |
-| acos          | math.acos                | acos(cosine)         |
-| asin          | math.asin                | asin(sine)           |
-| atan          | math.atan                | atan(tangent)        |
-| atan2         | math.atan2               | atan2(adj, opp)      |
-| ceil          | math.ceil                | ceil(value)          |
-| cos           | math.cos                 | cos(angle)           |
-| exp           | math.exp                 | exp(power)           |
-| abs           | math.fabs                | fabs(value)          |
-| floor         | math.floor               | floor(value)         |
-| log           | math.log                 | log(value)           |
-| log10         | math.log10               | log10(value)         |
-| rand          | math.rand                | rand()               |
-| sin           | math.sin                 | sin(angle)           |
-| sqrt          | math.sqrt                | sqrt(value)          |
-| tan           | math.tan                 | tan(angle)           |
+| switch				| switch block             | switch (cond) { default: break; }|
 
 ## Contributing
 
