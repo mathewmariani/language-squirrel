@@ -1,0 +1,3 @@
+'.source.nut':
+  'editor':
+    'commentStart': '# '

@@ -1,5 +1,5 @@
 '.source.nut':
-  # class snippets
+  # container snippets
   'class':
     'prefix': 'class'
     'body': 'class ${0:className}  {\n\t\n}'
@@ -45,6 +45,6 @@
   'else if conditional':
     'prefix': 'elif'
     'body': 'else if (${1:cond}) {\n\t${0:# body}\n}'
-  'switch block'
+  'switch block':
     'prefix': 'switch'
     'body': 'switch (${0:cond}) {\ndefault: break;\n}'
