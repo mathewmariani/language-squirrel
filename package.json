@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "squirrel-language",
   "description": "Add syntax highlighting and snippets to Squirrel files in Atom",
   "homepage": "https://github.com/mathewmariani/squirrel-language",
